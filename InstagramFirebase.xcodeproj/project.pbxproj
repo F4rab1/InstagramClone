@@ -102,7 +102,6 @@
 				6C99EC2CD559F82772A9D9CC /* Pods-InstagramFirebase.debug.xcconfig */,
 				2A99F348892DD59D0B29E527 /* Pods-InstagramFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +151,9 @@
 				Base,
 			);
 			mainGroup = D354F92D2AB359A70046AD98;
+			packageReferences = (
+				D3AA7F5A2B04F6B300E63A5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D354F9372AB359A80046AD98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -443,6 +445,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3AA7F5A2B04F6B300E63A5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = D354F92E2AB359A70046AD98 /* Project object */;
 }

@@ -9,19 +9,42 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let plusPhotoButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
+        button.addTarget(self, action: #selector(handlePlusPhoto), for: .touchUpInside)
         return button
     }()
+    
+    @objc func handlePlusPhoto() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            plusPhotoButton.setImage(editedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            plusPhotoButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+        
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width/2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.black.cgColor
+        plusPhotoButton.layer.borderWidth = 2
+        
+        dismiss(animated: true, completion: nil)
+    }
     
     let emailTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Email"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
+        tf.autocapitalizationType = .none
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
@@ -32,6 +55,7 @@ class ViewController: UIViewController {
         tf.placeholder = "Username"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
+        tf.autocapitalizationType = .none
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
@@ -40,9 +64,10 @@ class ViewController: UIViewController {
     let passwordTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Password"
-        tf.isSecureTextEntry = true
+        tf.textContentType = .oneTimeCode
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
+        tf.autocapitalizationType = .none
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
@@ -84,6 +109,48 @@ class ViewController: UIViewController {
             }
             
             print("Successfully created user:", user?.user.uid ?? "")
+            
+            guard let image = self.plusPhotoButton.imageView?.image else { return }
+            
+            guard let uploadData = image.jpegData(compressionQuality: 0.1) else { return }
+            
+            let filename = NSUUID().uuidString
+            
+            let storageRef = Storage.storage().reference().child("profile_images").child(filename)
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, err) in
+                
+                if let err = err {
+                    print("Failed to upload profile image:", err)
+                    return
+                }
+                
+                storageRef.downloadURL(completion: { (downloadURL, err) in
+                    if let err = err {
+                        print("Failed to fetch downloadURL:", err)
+                        return
+                    }
+                    
+                    guard let profileImageUrl = downloadURL?.absoluteString else { return }
+                    
+                    print("Successfully uploaded profile image:", profileImageUrl)
+                    
+                    guard let uid = user?.user.uid else { return }
+                    
+                    let dictionaryValues = ["username": username, "profileImageUrl": profileImageUrl]
+                    let values = [uid: dictionaryValues]
+                    
+                    Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (err, ref) in
+                        
+                        if let err = err {
+                            print("Failed to save user info into db:", err)
+                            return
+                        }
+                        
+                        print("Successfully saved user info to db")
+                        
+                    })
+                })
+            })
             
         })
     }
