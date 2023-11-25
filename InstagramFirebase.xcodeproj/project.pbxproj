@@ -11,11 +11,12 @@
 		D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F9392AB359A80046AD98 /* AppDelegate.swift */; };
 		D354F93C2AB359A80046AD98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93B2AB359A80046AD98 /* SceneDelegate.swift */; };
 		D354F93E2AB359A80046AD98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93D2AB359A80046AD98 /* ViewController.swift */; };
-		D354F9412AB359A80046AD98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D354F93F2AB359A80046AD98 /* Main.storyboard */; };
 		D354F9432AB359A90046AD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D354F9422AB359A90046AD98 /* Assets.xcassets */; };
 		D354F9462AB359A90046AD98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D354F9442AB359A90046AD98 /* LaunchScreen.storyboard */; };
 		D354F94F2AB47B280046AD98 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F94E2AB47B280046AD98 /* Extensions.swift */; };
 		D354F9512AB4809B0046AD98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D354F9502AB4809A0046AD98 /* GoogleService-Info.plist */; };
+		D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C130C2B1287F900C97D5A /* MainTabBarController.swift */; };
+		D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C130E2B1288CA00C97D5A /* UserProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +27,13 @@
 		D354F9392AB359A80046AD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D354F93B2AB359A80046AD98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D354F93D2AB359A80046AD98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D354F9402AB359A80046AD98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D354F9422AB359A90046AD98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D354F9452AB359A90046AD98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D354F9472AB359A90046AD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D354F94E2AB47B280046AD98 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D354F9502AB4809A0046AD98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D38C130C2B1287F900C97D5A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		D38C130E2B1288CA00C97D5A /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 				D354F94D2AB47AFD0046AD98 /* Utils  */,
 				D354F9392AB359A80046AD98 /* AppDelegate.swift */,
 				D354F93B2AB359A80046AD98 /* SceneDelegate.swift */,
+				D38C130C2B1287F900C97D5A /* MainTabBarController.swift */,
+				D38C130E2B1288CA00C97D5A /* UserProfileController.swift */,
 				D354F93D2AB359A80046AD98 /* ViewController.swift */,
-				D354F93F2AB359A80046AD98 /* Main.storyboard */,
 				D354F9422AB359A90046AD98 /* Assets.xcassets */,
 				D354F9442AB359A90046AD98 /* LaunchScreen.storyboard */,
 				D354F9472AB359A90046AD98 /* Info.plist */,
@@ -171,7 +174,6 @@
 				D354F9462AB359A90046AD98 /* LaunchScreen.storyboard in Resources */,
 				D354F9432AB359A90046AD98 /* Assets.xcassets in Resources */,
 				D354F9512AB4809B0046AD98 /* GoogleService-Info.plist in Resources */,
-				D354F9412AB359A80046AD98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +228,8 @@
 			files = (
 				D354F93E2AB359A80046AD98 /* ViewController.swift in Sources */,
 				D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */,
+				D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */,
+				D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */,
 				D354F93C2AB359A80046AD98 /* SceneDelegate.swift in Sources */,
 				D354F94F2AB47B280046AD98 /* Extensions.swift in Sources */,
 			);
@@ -234,14 +238,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D354F93F2AB359A80046AD98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D354F9402AB359A80046AD98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D354F9442AB359A90046AD98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -377,9 +373,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstagramFirebase/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We'd like access to your photos right now";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -405,9 +401,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstagramFirebase/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We'd like access to your photos right now";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
