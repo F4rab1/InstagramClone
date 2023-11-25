@@ -17,6 +17,7 @@
 		D354F9512AB4809B0046AD98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D354F9502AB4809A0046AD98 /* GoogleService-Info.plist */; };
 		D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C130C2B1287F900C97D5A /* MainTabBarController.swift */; };
 		D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C130E2B1288CA00C97D5A /* UserProfileController.swift */; };
+		D38C13122B12986A00C97D5A /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C13112B12986A00C97D5A /* UserProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D354F9502AB4809A0046AD98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D38C130C2B1287F900C97D5A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D38C130E2B1288CA00C97D5A /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		D38C13112B12986A00C97D5A /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,11 @@
 		D354F9382AB359A80046AD98 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D38C13102B12984200C97D5A /* UserProfile */,
 				D354F94D2AB47AFD0046AD98 /* Utils  */,
 				D354F9392AB359A80046AD98 /* AppDelegate.swift */,
 				D354F93B2AB359A80046AD98 /* SceneDelegate.swift */,
 				D38C130C2B1287F900C97D5A /* MainTabBarController.swift */,
-				D38C130E2B1288CA00C97D5A /* UserProfileController.swift */,
 				D354F93D2AB359A80046AD98 /* ViewController.swift */,
 				D354F9422AB359A90046AD98 /* Assets.xcassets */,
 				D354F9442AB359A90046AD98 /* LaunchScreen.storyboard */,
@@ -97,6 +99,15 @@
 				D354F94E2AB47B280046AD98 /* Extensions.swift */,
 			);
 			path = "Utils ";
+			sourceTree = "<group>";
+		};
+		D38C13102B12984200C97D5A /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				D38C130E2B1288CA00C97D5A /* UserProfileController.swift */,
+				D38C13112B12986A00C97D5A /* UserProfileHeader.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		D98B42A9D83B96CDD9D2D2DE /* Pods */ = {
@@ -227,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D354F93E2AB359A80046AD98 /* ViewController.swift in Sources */,
+				D38C13122B12986A00C97D5A /* UserProfileHeader.swift in Sources */,
 				D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */,
 				D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */,
 				D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */,
