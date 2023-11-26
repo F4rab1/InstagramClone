@@ -10,11 +10,12 @@
 		0A89E83EBC27A01835DE5A97 /* Pods_InstagramFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF748A1203A64B02080D399 /* Pods_InstagramFirebase.framework */; };
 		D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F9392AB359A80046AD98 /* AppDelegate.swift */; };
 		D354F93C2AB359A80046AD98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93B2AB359A80046AD98 /* SceneDelegate.swift */; };
-		D354F93E2AB359A80046AD98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93D2AB359A80046AD98 /* ViewController.swift */; };
+		D354F93E2AB359A80046AD98 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93D2AB359A80046AD98 /* SignUpController.swift */; };
 		D354F9432AB359A90046AD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D354F9422AB359A90046AD98 /* Assets.xcassets */; };
 		D354F9462AB359A90046AD98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D354F9442AB359A90046AD98 /* LaunchScreen.storyboard */; };
 		D354F94F2AB47B280046AD98 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F94E2AB47B280046AD98 /* Extensions.swift */; };
 		D354F9512AB4809B0046AD98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D354F9502AB4809A0046AD98 /* GoogleService-Info.plist */; };
+		D38B158E2B13BE49004E995F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38B158D2B13BE49004E995F /* LoginController.swift */; };
 		D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C130C2B1287F900C97D5A /* MainTabBarController.swift */; };
 		D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C130E2B1288CA00C97D5A /* UserProfileController.swift */; };
 		D38C13122B12986A00C97D5A /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C13112B12986A00C97D5A /* UserProfileHeader.swift */; };
@@ -27,12 +28,13 @@
 		D354F9362AB359A80046AD98 /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D354F9392AB359A80046AD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D354F93B2AB359A80046AD98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D354F93D2AB359A80046AD98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D354F93D2AB359A80046AD98 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		D354F9422AB359A90046AD98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D354F9452AB359A90046AD98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D354F9472AB359A90046AD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D354F94E2AB47B280046AD98 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D354F9502AB4809A0046AD98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D38B158D2B13BE49004E995F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D38C130C2B1287F900C97D5A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D38C130E2B1288CA00C97D5A /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D38C13112B12986A00C97D5A /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
@@ -79,12 +81,12 @@
 		D354F9382AB359A80046AD98 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D38B158C2B13BE33004E995F /* Login */,
 				D38C13102B12984200C97D5A /* UserProfile */,
 				D354F94D2AB47AFD0046AD98 /* Utils  */,
 				D354F9392AB359A80046AD98 /* AppDelegate.swift */,
 				D354F93B2AB359A80046AD98 /* SceneDelegate.swift */,
 				D38C130C2B1287F900C97D5A /* MainTabBarController.swift */,
-				D354F93D2AB359A80046AD98 /* ViewController.swift */,
 				D354F9422AB359A90046AD98 /* Assets.xcassets */,
 				D354F9442AB359A90046AD98 /* LaunchScreen.storyboard */,
 				D354F9472AB359A90046AD98 /* Info.plist */,
@@ -99,6 +101,15 @@
 				D354F94E2AB47B280046AD98 /* Extensions.swift */,
 			);
 			path = "Utils ";
+			sourceTree = "<group>";
+		};
+		D38B158C2B13BE33004E995F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D38B158D2B13BE49004E995F /* LoginController.swift */,
+				D354F93D2AB359A80046AD98 /* SignUpController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D38C13102B12984200C97D5A /* UserProfile */ = {
@@ -237,11 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D354F93E2AB359A80046AD98 /* ViewController.swift in Sources */,
+				D354F93E2AB359A80046AD98 /* SignUpController.swift in Sources */,
 				D38C13122B12986A00C97D5A /* UserProfileHeader.swift in Sources */,
 				D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */,
 				D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */,
 				D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */,
+				D38B158E2B13BE49004E995F /* LoginController.swift in Sources */,
 				D354F93C2AB359A80046AD98 /* SceneDelegate.swift in Sources */,
 				D354F94F2AB47B280046AD98 /* Extensions.swift in Sources */,
 			);
