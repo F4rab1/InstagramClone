@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A89E83EBC27A01835DE5A97 /* Pods_InstagramFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF748A1203A64B02080D399 /* Pods_InstagramFirebase.framework */; };
+		D32E90B52B1F954D00571E92 /* PhotoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E90B42B1F954D00571E92 /* PhotoSelectorController.swift */; };
 		D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F9392AB359A80046AD98 /* AppDelegate.swift */; };
 		D354F93C2AB359A80046AD98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93B2AB359A80046AD98 /* SceneDelegate.swift */; };
 		D354F93E2AB359A80046AD98 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F93D2AB359A80046AD98 /* SignUpController.swift */; };
@@ -25,6 +25,8 @@
 		2A99F348892DD59D0B29E527 /* Pods-InstagramFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		2BF748A1203A64B02080D399 /* Pods_InstagramFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C99EC2CD559F82772A9D9CC /* Pods-InstagramFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		D3165EFF2B1F5D6F009AEE40 /* FirebaseCoreExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32E90B42B1F954D00571E92 /* PhotoSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
 		D354F9362AB359A80046AD98 /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D354F9392AB359A80046AD98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D354F93B2AB359A80046AD98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A89E83EBC27A01835DE5A97 /* Pods_InstagramFirebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,9 +56,18 @@
 		3867FD34F4CE48387D3D33D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3165EFF2B1F5D6F009AEE40 /* FirebaseCoreExtension.framework */,
 				2BF748A1203A64B02080D399 /* Pods_InstagramFirebase.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D32E90B32B1F953500571E92 /* AddPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				D32E90B42B1F954D00571E92 /* PhotoSelectorController.swift */,
+			);
+			path = AddPhoto;
 			sourceTree = "<group>";
 		};
 		D354F92D2AB359A70046AD98 = {
@@ -81,6 +91,7 @@
 		D354F9382AB359A80046AD98 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D32E90B32B1F953500571E92 /* AddPhoto */,
 				D38B158C2B13BE33004E995F /* Login */,
 				D38C13102B12984200C97D5A /* UserProfile */,
 				D354F94D2AB47AFD0046AD98 /* Utils  */,
@@ -148,6 +159,8 @@
 			dependencies = (
 			);
 			name = InstagramFirebase;
+			packageProductDependencies = (
+			);
 			productName = InstagramFirebase;
 			productReference = D354F9362AB359A80046AD98 /* InstagramFirebase.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +264,7 @@
 				D354F93E2AB359A80046AD98 /* SignUpController.swift in Sources */,
 				D38C13122B12986A00C97D5A /* UserProfileHeader.swift in Sources */,
 				D354F93A2AB359A80046AD98 /* AppDelegate.swift in Sources */,
+				D32E90B52B1F954D00571E92 /* PhotoSelectorController.swift in Sources */,
 				D38C130F2B1288CA00C97D5A /* UserProfileController.swift in Sources */,
 				D38C130D2B1287FA00C97D5A /* MainTabBarController.swift in Sources */,
 				D38B158E2B13BE49004E995F /* LoginController.swift in Sources */,
